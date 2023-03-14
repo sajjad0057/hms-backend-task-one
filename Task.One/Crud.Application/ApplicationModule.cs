@@ -44,15 +44,17 @@ namespace Crud.Application
             builder.RegisterType<ProductRepository>().As<IProductRepository>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<AddProductHandler>().As<IRequestHandler<AddProductCommand>>()
+            builder.RegisterType<AddProductHandler>()
+                .As<IRequestHandler<AddProductCommand>>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UpdateProductHandler>()
+                .As<IRequestHandler<UpdateProductCommand>>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<GetProductsHandler>()
                 .As<IRequestHandler<GetProductsQuery, IList<ProductDto>>>()
                 .InstancePerLifetimeScope();
-
-            builder.RegisterType<ProductDto>().AsSelf();
-
 
             base.Load(builder);
         }

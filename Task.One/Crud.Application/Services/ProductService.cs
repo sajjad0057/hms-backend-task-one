@@ -28,5 +28,20 @@ namespace Crud.Application.Services
 
             return _mapper.Map<IList<ProductDto>>(products);
         }
+
+        public async Task EditProductAsync(ProductDto product)
+        {
+            var productEO = await _applicationUnitOfWork.Products.GetByIdAsync(product.Id);
+            
+            if(productEO is not null)
+            {
+                _mapper.Map(product, productEO);
+                await _applicationUnitOfWork.SaveAsync();
+            }
+            else
+            {
+                throw new InvalidOperationException("product doesn't exists !");
+            }           
+        }
     }
 }

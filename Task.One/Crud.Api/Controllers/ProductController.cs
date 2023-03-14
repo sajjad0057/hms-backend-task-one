@@ -12,15 +12,12 @@ namespace Crud.Api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
-
-        private readonly ILifetimeScope _scope;
         private readonly IMediator _mediator;
 
         public ProductController(ILogger<ProductController> logger,
-            ILifetimeScope scope,IMediator mediator)
+            IMediator mediator)
         {
             _logger = logger;
-            _scope = scope;
             _mediator = mediator;
         }
 
@@ -47,6 +44,21 @@ namespace Crud.Api.Controllers
                 return Ok();
             }
             catch(Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest();
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateProduct([FromBody] ProductDto product)
+        {
+            try
+            {
+                await _mediator.Send(new UpdateProductCommand(product));
+                return Ok();
+            }
+            catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
                 return BadRequest();

@@ -9,5 +9,6 @@ namespace Crud.Application.Services
         Task<ProductDto> GetProductByIdAsync(Guid id);
         Task EditProductAsync(ProductDto product);
         Task DeleteProductAsync(ProductDto product);
+        Task DeleteProductById(Guid id);
     }
 }

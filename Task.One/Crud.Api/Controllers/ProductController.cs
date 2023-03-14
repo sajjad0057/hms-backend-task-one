@@ -21,6 +21,7 @@ namespace Crud.Api.Controllers
             _mediator = mediator;
         }
 
+
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
@@ -35,6 +36,7 @@ namespace Crud.Api.Controllers
                 return BadRequest();
             }
         }
+
 
         [HttpGet("{id:Guid}", Name = "GetProductById")]
         public async Task<IActionResult> GetProductById(Guid id)
@@ -51,6 +53,7 @@ namespace Crud.Api.Controllers
             }
         }
 
+
         [HttpPost]
         public async Task<IActionResult> AddProduct([FromBody]ProductDto product)
         {
@@ -65,6 +68,7 @@ namespace Crud.Api.Controllers
                 return BadRequest();
             }
         }
+
 
         [HttpPut]
         public async Task<IActionResult> UpdateProduct([FromBody] ProductDto product)
@@ -81,6 +85,7 @@ namespace Crud.Api.Controllers
             }
         }
 
+
         [HttpDelete]
         public async Task<IActionResult> DeleteProduct([FromBody] ProductDto product)
         {
@@ -88,6 +93,23 @@ namespace Crud.Api.Controllers
             {
                 await _mediator.Send(new RemoveProductCommand(product));
                 return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest();
+            }
+        }
+
+
+        [HttpDelete("{id:Guid}", Name = "DeleteProductById")]
+        public async Task<IActionResult> DeleteProductById(Guid id)
+        {
+            try
+            {
+                await _mediator.Send(new RemoveProductByIdCommand(id));
+                return Ok();
+
             }
             catch (Exception ex)
             {

@@ -56,5 +56,11 @@ namespace Crud.Application.Services
             await _applicationUnitOfWork.Products.RemoveAsync(_mapper.Map<Product>(product));
             await _applicationUnitOfWork.SaveAsync();
         }
+
+        public async Task DeleteProductById(Guid id)
+        {
+            await _applicationUnitOfWork.Products.RemoveAsync(id);
+            await _applicationUnitOfWork.SaveAsync();
+        }
     }
 }

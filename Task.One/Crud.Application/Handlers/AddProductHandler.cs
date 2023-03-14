@@ -15,9 +15,11 @@ namespace Crud.Application.Handlers
 
         public AddProductHandler(IProductService productService) => _productService = productService;
 
-        public Task Handle(AddProductCommand request, CancellationToken cancellationToken)
+        public async Task Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _productService.AddProductAsync(request.product);
+
+            return;
         }
     }
 }

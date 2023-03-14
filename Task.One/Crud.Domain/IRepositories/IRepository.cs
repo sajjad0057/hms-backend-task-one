@@ -1,5 +1,4 @@
 ﻿using Crud.Domain.Entities;
-using System.Linq.Expressions;
 
 namespace Crud.Domain.IRepositories
 {
@@ -11,6 +10,5 @@ namespace Crud.Domain.IRepositories
         Task EditAsync(TEntity entityToUpdate);
         Task<IList<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(TKey id);
-
     }
 }

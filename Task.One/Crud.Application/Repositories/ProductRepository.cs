@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Crud.Application.Repositories
 {
-    public class ProductRepository : Repository<Product, int>, IProductRepository
+    public class ProductRepository : Repository<Product, Guid>, IProductRepository
     {
         public ProductRepository(IApplicationDbContext context) : base((DbContext)context)
         {

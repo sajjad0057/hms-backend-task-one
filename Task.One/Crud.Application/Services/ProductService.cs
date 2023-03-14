@@ -2,11 +2,6 @@
 using Crud.Application.DTOs;
 using Crud.Application.UnitOfWorks;
 using Crud.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Crud.Application.Services
 {
@@ -21,9 +16,10 @@ namespace Crud.Application.Services
             _mapper = mapper;
         }
 
-        public Task AddProduct(ProductDto product)
+        public async Task AddProductAsync(ProductDto product)
         {
-            _applicationUnitOfWork.Products.Add(_mapper.Map<Product>(product))
+            await _applicationUnitOfWork.Products.AddAsync(_mapper.Map<Product>(product));
+            await _applicationUnitOfWork.SaveAsync();
         }
     }
 }

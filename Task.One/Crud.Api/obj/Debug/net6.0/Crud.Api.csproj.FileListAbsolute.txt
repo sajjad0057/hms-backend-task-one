@@ -94,3 +94,5 @@ G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\Crud.Application.pdb
 G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\Crud.Domain.pdb
 G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\Humanizer.dll
 G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\MediatR.dll
+G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\MediatR.Contracts.dll

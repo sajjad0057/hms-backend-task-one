@@ -9,6 +9,6 @@ namespace Crud.Application.Services
 {
     public interface IProductService
     {
-        Task AddProduct(ProductDto product);
+        Task AddProductAsync(ProductDto product);
     }
 }

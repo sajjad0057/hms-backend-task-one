@@ -7,6 +7,7 @@ using Crud.Api;
 using Crud.Application;
 using Crud.Application.DbContexts;
 using Microsoft.EntityFrameworkCore;
+using Crud.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,7 @@ try
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(connectionString,
         m => m.MigrationsAssembly(assemblyName)));
+
 
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

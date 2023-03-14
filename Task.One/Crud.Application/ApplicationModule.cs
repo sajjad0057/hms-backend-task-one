@@ -1,9 +1,13 @@
 ﻿using Autofac;
+using Crud.Application.Commands;
 using Crud.Application.DbContexts;
 using Crud.Application.DTOs;
+using Crud.Application.Handlers;
 using Crud.Application.Repositories;
 using Crud.Application.Services;
 using Crud.Application.UnitOfWorks;
+using Crud.Domain.Entities;
+using MediatR;
 
 namespace Crud.Application
 {
@@ -37,6 +41,9 @@ namespace Crud.Application
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<ProductRepository>().As<IProductRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<AddProductHandler>().As<IRequestHandler<AddProductCommand>>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<ProductDto>().AsSelf();

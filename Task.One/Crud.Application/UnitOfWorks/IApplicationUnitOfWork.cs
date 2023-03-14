@@ -1,13 +1,9 @@
 ﻿using Crud.Application.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Crud.Domain.IUnitOfWorks;
 
 namespace Crud.Application.UnitOfWorks
 {
-    public interface IApplicationUnitOfWork
+    public interface IApplicationUnitOfWork : IUnitOfWork
     {
         IProductRepository Products { get; }
     }

@@ -3,7 +3,7 @@ using Crud.Domain.IRepositories;
 
 namespace Crud.Application.Repositories
 {
-    public interface IProductRepository : IRepository<Product,int>
+    public interface IProductRepository : IRepository<Product,Guid>
     {
     }
 }

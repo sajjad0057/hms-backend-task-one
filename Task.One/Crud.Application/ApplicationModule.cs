@@ -1,6 +1,9 @@
 ﻿using Autofac;
 using Crud.Application.DbContexts;
-
+using Crud.Application.DTOs;
+using Crud.Application.Repositories;
+using Crud.Application.Services;
+using Crud.Application.UnitOfWorks;
 
 namespace Crud.Application
 {
@@ -26,6 +29,18 @@ namespace Crud.Application
                 .WithParameter("connectingString", _connectingString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<ApplicationUnitOfWork>().As<IApplicationUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductService>().As<IProductService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductRepository>().As<IProductRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductDto>().AsSelf();
+
 
             base.Load(builder);
         }

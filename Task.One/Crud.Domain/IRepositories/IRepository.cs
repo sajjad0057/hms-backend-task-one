@@ -1,7 +1,7 @@
 ﻿using Crud.Domain.Entities;
 using System.Linq.Expressions;
 
-namespace Crud.Domain.Infrastructure.IRepositories
+namespace Crud.Domain.IRepositories
 {
     public interface IRepository<TEntity, TKey>
         where TEntity : class, IEntity<TKey>

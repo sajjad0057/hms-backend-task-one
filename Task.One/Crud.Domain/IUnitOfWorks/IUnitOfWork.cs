@@ -1,4 +1,4 @@
-﻿namespace Crud.Domain.Infrastructure.IUnitOfWorks
+﻿namespace Crud.Domain.IUnitOfWorks
 {
     public interface IUnitOfWork : IDisposable
     {

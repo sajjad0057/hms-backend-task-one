@@ -6,8 +6,6 @@ namespace Crud.Api
     {
         protected override void Load(ContainerBuilder builder)
         {
-
-
             base.Load(builder);
         }
     }

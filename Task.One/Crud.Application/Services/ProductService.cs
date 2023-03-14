@@ -43,5 +43,11 @@ namespace Crud.Application.Services
                 throw new InvalidOperationException("product doesn't exists !");
             }           
         }
+
+        public async Task DeleteProductAsync(ProductDto product)
+        {
+            await _applicationUnitOfWork.Products.RemoveAsync(_mapper.Map<Product>(product));
+            await _applicationUnitOfWork.SaveAsync();
+        }
     }
 }

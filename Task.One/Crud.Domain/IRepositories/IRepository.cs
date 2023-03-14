@@ -7,6 +7,7 @@ namespace Crud.Domain.IRepositories
     {
         Task AddAsync(TEntity entity);
         Task RemoveAsync(TKey id);
+        Task RemoveAsync(TEntity entity);
         Task EditAsync(TEntity entityToUpdate);
         Task<IList<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(TKey id);

@@ -64,5 +64,20 @@ namespace Crud.Api.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProduct([FromBody] ProductDto product)
+        {
+            try
+            {
+                await _mediator.Send(new RemoveProductCommand(product));
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest();
+            }
+        }
     }
 }

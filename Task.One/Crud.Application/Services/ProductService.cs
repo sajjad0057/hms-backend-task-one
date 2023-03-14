@@ -29,6 +29,13 @@ namespace Crud.Application.Services
             return _mapper.Map<IList<ProductDto>>(products);
         }
 
+        public async Task<ProductDto> GetProductByIdAsync(Guid id)
+        {
+            var product = await _applicationUnitOfWork.Products.GetByIdAsync(id);
+
+            return _mapper.Map<ProductDto>(product);
+        }
+
         public async Task EditProductAsync(ProductDto product)
         {
             var productEO = await _applicationUnitOfWork.Products.GetByIdAsync(product.Id);

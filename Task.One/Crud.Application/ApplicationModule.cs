@@ -56,6 +56,10 @@ namespace Crud.Application
                 .As<IRequestHandler<GetProductsQuery, IList<ProductDto>>>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<GetProductByIdHandler>()
+                .As<IRequestHandler<GetProductByIdQuery,ProductDto>>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<RemoveProductHandler>()
                 .As<IRequestHandler<RemoveProductCommand>>()
                 .InstancePerLifetimeScope();

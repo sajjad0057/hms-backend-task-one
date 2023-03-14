@@ -6,6 +6,7 @@ namespace Crud.Application.Services
     {
         Task AddProductAsync(ProductDto product);
         Task<IList<ProductDto>> GetAllProductsAsync();
+        Task<ProductDto> GetProductByIdAsync(Guid id);
         Task EditProductAsync(ProductDto product);
         Task DeleteProductAsync(ProductDto product);
     }

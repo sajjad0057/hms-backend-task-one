@@ -28,6 +28,22 @@ namespace Crud.Api.Controllers
             {
                 var products = await _mediator.Send(new GetProductsQuery());
                 return Ok(products);
+
+            }catch(Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("{id:Guid}", Name = "GetProductById")]
+        public async Task<IActionResult> GetProductById(Guid id)
+        {
+            try
+            {
+                var products = await _mediator.Send(new GetProductByIdQuery(id));
+                return Ok(products);
+
             }catch(Exception ex)
             {
                 _logger.LogError(ex, ex.Message);

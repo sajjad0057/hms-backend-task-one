@@ -27,13 +27,16 @@ try
     {
         containerBuilder.RegisterModule(new ApiModule());
 
-        containerBuilder.RegisterModule(new ApplicationModule(connectionString, assemblyName));
+        containerBuilder.RegisterModule(new ApplicationModule(connectionString,
+            assemblyName));
     });
 
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString, m => m.MigrationsAssembly(assemblyName)));
+        options.UseSqlServer(connectionString,
+        m => m.MigrationsAssembly(assemblyName)));
 
-    builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+    builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
     // Add services to the container.
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

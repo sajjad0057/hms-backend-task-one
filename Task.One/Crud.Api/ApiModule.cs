@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Crud.Api.Models;
 
 namespace Crud.Api
 {
@@ -6,6 +7,9 @@ namespace Crud.Api
     {
         protected override void Load(ContainerBuilder builder)
         {
+
+            builder.RegisterType<ProductModel>().AsSelf();
+
             base.Load(builder);
         }
     }

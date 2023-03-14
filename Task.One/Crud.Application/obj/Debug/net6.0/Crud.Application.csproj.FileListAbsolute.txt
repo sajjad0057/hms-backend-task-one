@@ -1,0 +1,17 @@
+G:\hms-backend-task-one\Task.One\Crud.Application\bin\Debug\net6.0\Crud.Application.deps.json
+G:\hms-backend-task-one\Task.One\Crud.Application\bin\Debug\net6.0\Crud.Application.runtimeconfig.json
+G:\hms-backend-task-one\Task.One\Crud.Application\bin\Debug\net6.0\Crud.Application.dll
+G:\hms-backend-task-one\Task.One\Crud.Application\bin\Debug\net6.0\Crud.Application.pdb
+G:\hms-backend-task-one\Task.One\Crud.Application\bin\Debug\net6.0\Crud.Domain.dll
+G:\hms-backend-task-one\Task.One\Crud.Application\bin\Debug\net6.0\Crud.Domain.pdb
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.csproj.AssemblyReference.cache
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.GeneratedMSBuildEditorConfig.editorconfig
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.AssemblyInfoInputs.cache
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.AssemblyInfo.cs
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.csproj.CoreCompileInputs.cache
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.csproj.CopyComplete
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.dll
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\refint\Crud.Application.dll
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.pdb
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\Crud.Application.genruntimeconfig.cache
+G:\hms-backend-task-one\Task.One\Crud.Application\obj\Debug\net6.0\ref\Crud.Application.dll

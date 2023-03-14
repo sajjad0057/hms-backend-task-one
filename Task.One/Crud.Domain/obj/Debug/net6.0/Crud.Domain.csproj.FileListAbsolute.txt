@@ -1,0 +1,12 @@
+G:\hms-backend-task-one\Task.One\Crud.Domain\bin\Debug\net6.0\Crud.Domain.deps.json
+G:\hms-backend-task-one\Task.One\Crud.Domain\bin\Debug\net6.0\Crud.Domain.dll
+G:\hms-backend-task-one\Task.One\Crud.Domain\bin\Debug\net6.0\Crud.Domain.pdb
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.csproj.AssemblyReference.cache
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.AssemblyInfoInputs.cache
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.AssemblyInfo.cs
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.csproj.CoreCompileInputs.cache
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.dll
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\refint\Crud.Domain.dll
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\Crud.Domain.pdb
+G:\hms-backend-task-one\Task.One\Crud.Domain\obj\Debug\net6.0\ref\Crud.Domain.dll

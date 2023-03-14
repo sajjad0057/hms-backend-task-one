@@ -21,5 +21,12 @@ namespace Crud.Application.Services
             await _applicationUnitOfWork.Products.AddAsync(_mapper.Map<Product>(product));
             await _applicationUnitOfWork.SaveAsync();
         }
+
+        public async Task<IList<ProductDto>> GetAllProductsAsync()
+        {
+            var products = await _applicationUnitOfWork.Products.GetAllAsync();
+
+            return _mapper.Map<IList<ProductDto>>(products);
+        }
     }
 }

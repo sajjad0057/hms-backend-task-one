@@ -10,5 +10,6 @@ namespace Crud.Application.Services
     public interface IProductService
     {
         Task AddProductAsync(ProductDto product);
+        Task<IList<ProductDto>> GetAllProductsAsync();
     }
 }

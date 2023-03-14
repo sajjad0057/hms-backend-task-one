@@ -3,6 +3,7 @@ using Crud.Application.Commands;
 using Crud.Application.DbContexts;
 using Crud.Application.DTOs;
 using Crud.Application.Handlers;
+using Crud.Application.Queries;
 using Crud.Application.Repositories;
 using Crud.Application.Services;
 using Crud.Application.UnitOfWorks;
@@ -44,6 +45,10 @@ namespace Crud.Application
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<AddProductHandler>().As<IRequestHandler<AddProductCommand>>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<GetProductsHandler>()
+                .As<IRequestHandler<GetProductsQuery, IList<ProductDto>>>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<ProductDto>().AsSelf();

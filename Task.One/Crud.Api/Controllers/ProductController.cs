@@ -1,8 +1,8 @@
 ﻿using Autofac;
 using Crud.Application.Commands;
 using Crud.Application.DTOs;
+using Crud.Application.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crud.Api.Controllers
@@ -22,6 +22,20 @@ namespace Crud.Api.Controllers
             _logger = logger;
             _scope = scope;
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProducts()
+        {
+            try
+            {
+                var products = await _mediator.Send(new GetProductsQuery());
+                return Ok(products);
+            }catch(Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest();
+            }
         }
 
         [HttpPost]

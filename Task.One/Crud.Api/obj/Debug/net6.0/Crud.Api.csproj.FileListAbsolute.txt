@@ -96,3 +96,5 @@ G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\Humanizer.dll
 G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\MediatR.dll
 G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\MediatR.Contracts.dll
+G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\FluentValidation.dll
+G:\hms-backend-task-one\Task.One\Crud.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

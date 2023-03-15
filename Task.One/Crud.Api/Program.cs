@@ -7,7 +7,11 @@ using Crud.Api;
 using Crud.Application;
 using Crud.Application.DbContexts;
 using Microsoft.EntityFrameworkCore;
-using Crud.Application.Services;
+using FluentValidation;
+using MediatR;
+using Crud.Application.Behaviors;
+using Autofac.Core;
+using Crud.Application.Commands.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,8 +43,14 @@ try
 
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+    var x = Assembly.GetExecutingAssembly();
+
+    builder.Services.AddValidatorsFromAssembly(typeof(AddProductCommandValidator).Assembly);
+
     builder.Services.AddMediatR(
         cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
+    builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
     // Add services to the container.
     builder.Services.AddControllers();

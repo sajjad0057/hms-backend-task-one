@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7lHoq7orDOM85tvmWZGIUIT/gIUx0Kke3a088AFYIGzmwuYPq/oeMOhNuHbQIRkpYklztm90284ltcbO6nmGFA==",
+  "dgSpecHash": "8nwkA6r2sBTT+be6qTsFSSs32INQqrdXRWP7jkvP2HjEbLUWZKOv0nCqDkh5uDLS/KBGtlYQjf2QZyXHD7fLWA==",
   "success": true,
   "projectFilePath": "G:\\hms-backend-task-one\\Task.One\\Crud.Api\\Crud.Api.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Sajjad\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Sajjad\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Sajjad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\Sajjad\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Sajjad\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Sajjad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sajjad\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\Sajjad\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

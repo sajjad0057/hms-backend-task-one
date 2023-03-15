@@ -7,7 +7,6 @@ using Crud.Application.Queries;
 using Crud.Application.Repositories;
 using Crud.Application.Services;
 using Crud.Application.UnitOfWorks;
-using Crud.Domain.Entities;
 using MediatR;
 
 namespace Crud.Application
@@ -67,6 +66,8 @@ namespace Crud.Application
             builder.RegisterType<RemoveProductByIdHandler>()
                 .As<IRequestHandler<RemoveProductByIdCommand>>()
                 .InstancePerLifetimeScope();
+
+
 
             base.Load(builder);
         }
